@@ -1,0 +1,64 @@
+\documentclass{ewuthesis}
+
+\usepackage{graphbox}
+\graphicspath{ {images/} }
+                                %\usepackage[toc, xindy]{glossaries}
+                                % \newglossaryentry{cadal}{name={cadal},description={China Academic Digital Associate Library}}
+                                % \newacronym{cadal}{cadal}{CADALChina Academic Digital Associate Library}
+                                % \makeglossaries{}
+                                
+
+
+\begin{document}
+    \title{Detection of Chinese Character Features in "Collected Characters" Stelle using a Callibrated Classifier.}
+    \author{David A. McInnis}    
+    \degreeyear{2018}
+    \degreeterm{Spring}         %Winter, Spring, Summer, Fall
+    \degree{Master of Science}
+    \department{Computer Science} 
+    
+    \committeefirst{Kosuke Imamura, PhD}
+    \committeesecond{Carol Taylor, PhD}
+    \committeethird{Esteban Rodriguez-Marek, M.S.}
+    
+    \birthplace{Spokane, Washington}
+    \associatedegree{Associate of Applied Science}
+    \associateyear{2007}
+    \associateschool{Community College of the Air Force}
+    \bachelorsdegree{Bachelors of Science}
+    \bachelorsyear{2010}
+    \bachelorsschool{Embry-Riddle Aeronautical University}
+    
+    
+    \frontmatter
+    \maketitle
+    \makesigpage
+    \makelibrarystatement{}
+    \subimport{}{00-abstract.tex}
+    \subimport{}{01-acknowledgements.tex}
+    \mainmatter
+    \tableofcontents
+    \listoffigures{}
+    \subimport{}{02-introduction.tex}
+    \subimport{}{03-background.tex}
+    \subimport{}{04-experimental-setup.tex}
+    \subimport{}{05-experiment-results.tex}
+    \subimport{}{06-conclusion.tex}
+    \subimport{}{07-future-work.tex}
+    \backmatter{}
+    \subimport{}{a01-web-scraping.tex}
+    \subimport{}{a02-dataset-review-and-improvement.tex}
+    \subimport{}{a03-image-preprocessing.tex}
+    \subimport{}{a04-feature-extraction.tex}
+    \subimport{}{a05-application-demonstrations.tex}
+    \subimport{}{a06-reproducability.tex}
+    \bibliographystyle{acm}
+    \bibliography{ewuthesis}
+
+
+
+    
+    \makevita
+    
+    
+\end{document}

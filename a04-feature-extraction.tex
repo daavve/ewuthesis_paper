@@ -1,0 +1,25 @@
+\chapter{Feature Extraction}
+
+box is part of the character:
+
+1)  If it is inside a box that has a character
+2)  If the box is larger than 1 / 20th the area of the parent box,,,,   might change
+
+
+Differences between detected chars and selected chars:
+
+1) Detected chars are
+
+* Inside char region
+ -A part of character
+ -The whole character
+ --A glyph spanning multiple characters
+ --noise that is not part of a character
+
+* Outside char region.
+ -noise similar to the noise inside chars
+ -marks unrelated to calligraphy like smudges or stamps
+ 
+In order to prep the data for the support vector machine I will probably have to normalize the array size of each image
+
+integer	4 bytes	typical choice for integer	-2147483648 to +2147483647
