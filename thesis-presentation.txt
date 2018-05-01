@@ -1,0 +1,489 @@
+Chinese Calligraphy
+Character Segmentation
+1 / 35
+
+Segmentation of Chinese
+Calligraphy characters is
+very difcilt
+●
+
+●
+
+●
+
+Commercial grade Optical Character
+Recognition(OCR) software performs very
+poorly
+Tesseract—The leading free OCR tool cannot
+detect even a single character in the
+Collected Characters.
+Academic character detectors perform better,
+but quality is inconsistent, and work can be
+difcult to duplicate
+2 / 35
+
+Objective
+●
+
+●
+
+Apply best-in-class academic character
+detection methods to “collected character’s”
+book.
+Necessary components:
+–
+
+Feature extraction (SIFT)
+
+–
+
+Classifer ((Deep Learning)
+●
+
+Calligraphy training data CA(DAL
+
+3 / 35
+
+Best performing Academic
+examples
+●
+
+●
+
+●
+
+Scale Invariant Feature Transform(SIFT) and
+(Deep Learning (>94% accuracy)
+SIFT—A method for identifying the most
+important parts of an image. Robust against
+size and orientation
+(Deep Learning—A machine learning
+technique utilizing multiple layers of artifcial
+neurons.
+
+4 / 35
+
+Challenges with SIFT
+●
+
+SIFT is the best performing feature extraction
+technique
+–
+
+●
+
+SIFT is a patented technology and requires
+an expensive license (>$5,000)
+
+Alternative: Glyph-based feature extraction
+–
+
+Glyph: A contiguous island of black pixels
+surrounded by white pixels
+
+5 / 35
+
+Challenges with Deep
+Learning
+●
+
+(Deep learning is computationally very
+expensive.
+–
+
+●
+
+Best performing algorithms require server
+farms with exotic hardware
+
+Alternative: Simpler ML technique
+–
+
+Support Vector Machine(SVM)
+
+6 / 35
+
+Diferences/similarities
+●
+
+●
+
+Best Method:
+–
+
+Features extracted from image (SIFT)
+
+–
+
+Features fed into classifer ((Deep Learning)
+
+My Method
+–
+
+Image Binarized (Otsu)
+
+–
+
+Glyphs detected → features extracted
+
+–
+
+Features fed into classifcation flter (SVM)
+
+–
+
+Remaining Glyphs merged into characters
+7 / 35
+
+Image Binarization
+
+8 / 35
+
+Glyph Detection
+
+9 / 35
+
+Diferences/similarities
+●
+
+●
+
+Best Method:
+–
+
+Features extracted from image (SIFT)
+
+–
+
+Features fed into classifer ((Deep Learning)
+
+My Method
+–
+
+Image Binarized (Otsu)
+
+–
+
+Glyphs detected → features extracted
+
+–
+
+Features fed into classifcation flter (SVM)
+
+–
+
+Remaining Glyphs merged into characters
+10 / 35
+
+Diferences/similarities
+●
+
+●
+
+Best Method:
+–
+
+Features extracted from image (SIFT)
+
+–
+
+Features fed into classifer ((Deep Learning)
+
+My Method
+–
+
+Image Binarized (Otsu)
+
+–
+
+Glyphs detected → features extracted
+
+–
+
+Features fed into classifcation flter (SVM)
+
+–
+
+Remaining Glyphs merged into characters
+11 / 35
+
+Diferences/similarities
+●
+
+●
+
+Best Method:
+–
+
+Features extracted from image (SIFT)
+
+–
+
+Features fed into classifer ((Deep Learning)
+
+My Method
+–
+
+Image Binarized (Otsu)
+
+–
+
+Glyphs detected → features extracted
+
+–
+
+Features fed into classifcation flter (SVM)
+
+–
+
+Remaining Glyphs merged into characters
+12 / 35
+
+Classifer training
+●
+
+Before a classifer can be used it must be
+trained against known examples
+–
+
+Researchers in China have created a
+Chinese CAlligraphy (Dataset Library
+(CA(DAL)
+
+–
+
+CA(DAL → interactive website containing
+bounding-box data for 110,652 characters
+
+–
+
+Used a web-scraping technique to
+download full dataset from CA(DAL website.
+13 / 35
+
+CADAL
+
+14 / 35
+
+CADAL char draw
+
+15 / 35
+
+Performance
+●
+
+●
+
+classifer based on original data
+–
+
+precision: 0.97
+
+–
+
+Recall: 0.32
+
+–
+
+Accuracy: 0.64
+
+CA(DAL dataset is incomplete
+–
+
+Missing characters
+
+–
+
+Characters in wrong location
+
+16 / 35
+
+CADAL: Missing Characters
+
+17 / 35
+
+CADAL: Wrong Location
+
+18 / 35
+
+Fixing CADAL
+●
+
+●
+
+Built a web application for data validation
+–
+
+Correct bad quality characters
+
+–
+
+(Draw new characters
+
+5 people took about 3 months to validate all
+data
+
+19 / 35
+
+Web-app demo
+
+20 / 35
+
+CADAL Page Credit
+
+21 / 35
+
+CADAL Char Credit
+
+22 / 35
+
+Improved Performance
+●
+
+Precision: 0.97 → 0.73
+
+●
+
+Recall: 0.32 → 0.87
+
+●
+
+Accuracy: 0.64 → 0.76
+
+23 / 35
+
+Character’s detected >
+90% ising 2 of 3 best
+methods
+●
+
+SIFT Features → glyph features
+
+●
+
+(Deep Learning classifer → SVM classifer
+
+●
+
+Training data → Training data
+
+●
+
+CA(DAL validation most important contribution
+–
+
+Raw CA(DAL → inefective(quality issues)
+
+–
+
+Improved CA(DAL → efective SVM flter
+
+24 / 35
+
+Character Detection
+●
+
+(Detect Glyps
+
+●
+
+Filter Glyps using SVM Filter
+
+●
+
+Merge overlaping boxes (x2)
+
+●
+
+Remove distant boxes
+
+●
+
+Merge Medium sized boxes together
+
+25 / 35
+
+Character Featires
+
+26 / 35
+
+Filter Noise
+
+CADAL
+
+Improved
+
+27 / 35
+
+Merge overlapping boxes
+
+Good Featires
+
+Merged Boxes
+
+28 / 35
+
+Merge Boxes x2
+
+Merged
+
+2x Merge
+29 / 35
+
+Remove small distant
+Featires
+
+2x Merge
+
+removed
+
+30 / 35
+
+Combine Nearby Boxes
+
+2x Merge
+
+2x Merge
+31 / 35
+
+Char Detection : no Filter
+
+32 / 35
+
+Char Detection, BAD Filter
+
+33 / 35
+
+Char Detection: Good Filter
+
+34 / 35
+
+Conclision: Chinese
+Calligraphy Segmentation
+●
+
+Commercial OCR tools (Tesseract) inefective
+
+●
+
+Best performing academic tools not particle
+
+●
+
+–
+
+SIFT –($$$)
+
+–
+
+(Deep Learning—Computationally
+expensive
+
+Alternate, simpler method efective
+–
+
+Glyph-based segmentation
+
+35 / 35
+
+
