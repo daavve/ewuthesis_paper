@@ -1,15 +1,21 @@
 ABSTRACT\\
 
 
+The most effective methods for detecting objects within pictures, such as faces, or cars is a combination of Deep Learning, and SIFT(Scale Invariant Feature Transform).  These methods reliably give above TODO: GET Percentage.  Deep Learning and SIFT are flexible enough to apply to the character segmentation problem, but suffer several significant drawbacks:
+    1) The SIFT algorithm is patented, and it's use requires a steep licensing fee.
+    2) Deep learning is computationally very expensive, and typically requires many CPU's with computational accellerators such as ASIC's and GPU's.
+    3) Deep learning requires training a huge dataset of correctly labeled data to provide reasonable performance
+    4) The exact mechanisms which make deep learning so effective are not well understood.  This leads researchers treating deep-learning as a "Black box"
+    
+In contrast, the Glyph based segmentation method is much simpler and less computationally demanding than deep-learning based approaches
+    Glyph based segmentation is known to work well in similar fields such as written music detection
+    
+
+
+
 Text character segmentation has been solved in the general case for printed latin characters.  However the segmentation problem remains largely unsolved for Chinese Calligraphy.
 
 This paper examines applying a glyph-based segmentation algorithm to Chinese Calligraphy characters in the "Collected Characters Stelle"
-
-
-
-
-
-
 
 The character classification problem has not been solved in the general case.  Character classification can be done if the characters are restricted to certain fonts, but not for unconstrained fonts and especially not for free-flowing or badly degraded images.
 
